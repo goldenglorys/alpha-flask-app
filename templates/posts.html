@@ -7,6 +7,17 @@
 {% block body %}
 <h1>All Posts</h1>
 
+    <hr>
+    <h2>Create New Blog Post:</h2>
+    <form action="/posts", method="POST">
+        Title: <input type="text" name="title" id="title">
+        <br>
+        Content: <input type="text" name="content" id="content">
+        <br>
+        <input type="submit" value="Submit Post">
+    </form>
+    <hr>
+
     {% for post in posts %}
         <h3>{{ post.title }}</h3>
         {% if post.author %}
