@@ -9,6 +9,11 @@
 
     {% for post in posts %}
         <h3>{{ post.title }}</h3>
+        {% if post.author %}
+            <b>Post authored by: {{ post.author }}</b>
+        {% else %}
+            <b>Post authored by: N/A</b>
+        {% endif %}
         <p>{{ post.content }}</p>
     {% endfor %}
 
